@@ -65,6 +65,11 @@ function getRouteConfig(userProfile = {}) {
           screen: Templates,
         },
         {
+          title: <Trans>Workflows</Trans>,
+          path: '/templates?template.or__type=workflow_job_template',
+          screen: Templates,
+        },
+        {
           title: <Trans>Credentials</Trans>,
           path: '/credentials',
           screen: Credentials,
