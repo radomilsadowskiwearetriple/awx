@@ -56,19 +56,35 @@ function getRouteConfig(userProfile = {}) {
       ],
     },
     {
-      groupTitle: <Trans>Resources</Trans>,
-      groupId: 'resources_group',
+      groupTitle: <Trans>Templates</Trans>,
+      groupId: 'templates_group',
       routes: [
         {
-          title: <Trans>Templates</Trans>,
+          title: <Trans>All Templates</Trans>,
           path: '/templates',
           screen: Templates,
         },
         {
-          title: <Trans>Workflows</Trans>,
+          title: <Trans>All Workflows</Trans>,
           path: '/templates?template.or__type=workflow_job_template',
           screen: Templates,
         },
+        {
+          title: <Trans>ADMIN</Trans>,
+          path: '/templates?template.name__istartswith=admin_',
+          screen: Templates,
+        },
+        {
+          title: <Trans>AWXDEMO2</Trans>,
+          path: '/templates?template.name__istartswith=AWXDEMO2_',
+          screen: Templates,
+        }
+      ],
+    },
+    {
+      groupTitle: <Trans>Resources</Trans>,
+      groupId: 'resources_group',
+      routes: [
         {
           title: <Trans>Credentials</Trans>,
           path: '/credentials',
